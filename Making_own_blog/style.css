@@ -1,0 +1,67 @@
+/*--------------- header ---------------*/
+#flex_column {
+    display: flex;
+}
+
+.top {
+    border: 1px gray solid;
+    background-color: rgba(61, 60, 60, 0.445);
+
+}
+
+#logo {
+    width: 265px;
+    height: 100px;
+    border: 1px red solid;
+}
+
+#nav {
+
+}
+
+
+
+
+
+/*--------------- main ---------------*/
+
+body {
+    margin: 0%;
+}
+
+#div_flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    margin: 5%;
+    text-align: center;
+}
+
+section span {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+}
+
+
+footer {
+    display: inline;    
+}
+
+#intro_flex {
+    display: flex;
+    background-image: url(Img/header_bgi.jpg);
+    width: auto;
+    height: 460px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    margin-top: 30px;
+}
