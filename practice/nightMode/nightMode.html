@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>night_mode</title>
+</head>
+<body id = "body" style="background-color: white;">
+    <h1 id="demo">DAY</h1>
+    <img id="img" src="sun.jpeg" alt="sun">
+
+    <button id="night" onclick="changee()">Night</button>
+
+    <script>
+         
+        function changee() {
+            document.querySelector("#demo").innerHTML = "NIGHT";
+            document.querySelector("#night").innerHTML = "DAY";
+            document.querySelector("#img").src = "moon.jpeg";
+            document.getElementById("body").style = "background-color: black"
+        }
+    </script>
+</body>
+</html>
