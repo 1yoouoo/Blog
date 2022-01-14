@@ -10,24 +10,21 @@
     <h1 id="demo">DAY</h1>
     <img id="img" src="sun.jpeg" alt="sun">
 
-    <button id="night" onclick="
-    if(document.querySelector('#night').value === 'night'){Night()}else{Day()}
-    ">Night</button>
+    <input type="button" id="button1" value="Night" 
+    onclick="if(document.getElementById('button1').value === 'Night'){
+        document.getElementById('demo').innerHTML = 'NIGHT';
+        document.getElementById('demo').style.color = 'white';
+        document.getElementById('img').src = 'moon.jpeg'
+        document.getElementById('button1').value = 'Day'
+        document.getElementById('body').style.backgroundColor = 'black'
+    } else {
+        document.getElementById('demo').innerHTML = 'DAY';
+        document.getElementById('demo').style.color = 'black';
+        document.getElementById('img').src = 'sun.jpeg'
+        document.getElementById('button1').value = 'Night'
+        document.getElementById('body').style.backgroundColor = 'white'
+    }
+    ">
 
-    <script>
-         
-        function Night() {
-            document.querySelector("#demo").innerHTML = "NIGHT";
-            document.querySelector("#night").innerHTML = "DAY";
-            document.querySelector("#img").src = "moon.jpeg";
-            document.getElementById("body").style = "background-color: black"
-        }
-        function Day() {
-            document.querySelector("#demo").innerHTML = "DAY";
-            document.querySelector("#night").innerHTML = "NIGHT";
-            document.querySelector("#img").src = "sun.jpeg";
-            document.getElementById("body").style = "background-color: white"
-        }
-    </script>
 </body>
 </html>
