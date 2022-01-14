@@ -11,17 +11,19 @@
     <img id="img" src="sun.jpeg" alt="sun">
 
     <input type="button" id="button1" value="Night" 
-    onclick="if(document.getElementById('button1').value === 'Night'){
-        document.getElementById('demo').innerHTML = 'NIGHT';
-        document.getElementById('demo').style.color = 'white';
+    onclick="
+    var target = document.getElementById('demo')
+    if(this.value === 'Night'){
+        target.innerHTML = 'NIGHT';
+        target.style.color = 'white';
         document.getElementById('img').src = 'moon.jpeg'
-        document.getElementById('button1').value = 'Day'
+        this.value = 'Day'
         document.getElementById('body').style.backgroundColor = 'black'
     } else {
-        document.getElementById('demo').innerHTML = 'DAY';
-        document.getElementById('demo').style.color = 'black';
+        target.innerHTML = 'DAY';
+        target.style.color = 'black';
         document.getElementById('img').src = 'sun.jpeg'
-        document.getElementById('button1').value = 'Night'
+        this.value = 'Night'
         document.getElementById('body').style.backgroundColor = 'white'
     }
     ">
