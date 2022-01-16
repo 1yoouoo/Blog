@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is your age?</title>
+</head>
+<body>
+    <h1>2021년 현재</h1>
+    <input type="text" placeholder="당신이 태어난 연도는?" id="text"> <input type="submit" value="확인" onclick="myFunction()">
+    <script>
+        function myFunction() {
+            var guestBirth = document.getElementById('text').value;
+            var age = 2021 - guestBirth + 1
+            alert('당신은 ' + age + '살 입니다.')
+        }
+    </script>
+</body>
+</html>
