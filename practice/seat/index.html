@@ -10,10 +10,10 @@
     <h1>안녕하세요 입장객수에 따라 몇 줄인지 계산해주는 프로그램입니다.</h1>
     <h3></h3>
     <script>
-        var number = prompt("입장객은 몇 명입니까?");
-        var seat = prompt("한 줄에 몇 명이 앉습니까?");
+        let number = prompt("입장객은 몇 명입니까?");
+        let seat = prompt("한 줄에 몇 명이 앉습니까?");
         
-        var final = Math.ceil(number/seat)
+        let final = Math.ceil(number/seat)
         document.querySelector("h3").innerHTML = final + "줄 만드십쇼. 그럼 됩니다."
         
 
