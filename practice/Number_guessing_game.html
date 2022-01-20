@@ -13,9 +13,15 @@
         <br>See if you can guess it in 10 turns or less. 
         <br>We'll tell you if your guess was  too high or too low.
     </p>
-    <div>Enter a guess: <input type="text"> <input type="submit" value="Submit guess"></div>
+    <div>Enter a guess: <input id="guess" type="text"> <input id="submit" type="submit" value="Submit guess" onclick="myFunction()"></div>
     <script>
-        var randomNumber = Math.floor(Math.random() * 101);
+        const randomNumber = Math.floor(Math.random() * 101);
+        
+        function myFunction() {
+            const yourGuess = document.getElementById('guess').value;
+            document.write(yourGuess)
+        
+        }
     </script>
 </body>
 </html>
