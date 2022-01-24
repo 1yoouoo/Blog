@@ -17,10 +17,12 @@
     <p id="this"></p>
     <script>
         const randomNumber = Math.floor(Math.random() * 101);
+        Guesses = [];
         
         function myFunction() { 
             const yourGuess = document.getElementById('guess').value;
-            document.getElementById('this').innerText=yourGuess
+            Guesses.push(yourGuess);
+            document.getElementById('this').innerText="Privious guess : " + Guesses
         
         }
     </script>
