@@ -19,12 +19,19 @@
     <script>
         const randomNumber = Math.floor(Math.random() * 101);
         Guesses = [];
-        
+        count = 0
         function myFunction() { 
             const yourGuess = document.getElementById('guess').value;
             if(yourGuess < randomNumber) {
                 document.getElementById('answer').innerText = "틀렸습니다 ! 숫자가 너무 작습니다."
-
+                count++
+            }
+            else if(yourGuess > randomNumber) {
+                document.getElementById('answer').innerText = "틀렸습니다 ! 숫자가 너무 큽니다."
+                count++
+            }
+            else if(yourGuess == randomNumber) {
+                document.getElementById('answer').innerText = "축하합니다 ! 정답입니다 !"
             }
             Guesses.push(yourGuess);
             document.getElementById('this').innerText="Privious guess : " + Guesses
