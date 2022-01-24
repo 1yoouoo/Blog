@@ -14,6 +14,7 @@
         <br>We'll tell you if your guess was  too high or too low.
     </p>
     <div>Enter a guess: <input id="guess" type="text"> <input id="submit" type="submit" value="Submit guess" onclick="myFunction()"></div>
+    <p id="answer"></p>
     <p id="this"></p>
     <script>
         const randomNumber = Math.floor(Math.random() * 101);
@@ -21,11 +22,15 @@
         
         function myFunction() { 
             const yourGuess = document.getElementById('guess').value;
+            if(yourGuess < randomNumber) {
+                document.getElementById('answer').innerText = "틀렸습니다 ! 숫자가 너무 작습니다."
+
+            }
             Guesses.push(yourGuess);
             document.getElementById('this').innerText="Privious guess : " + Guesses
         
         }
-
+        /*
         if (yourGuess !== randomNumber) {
             1. 당신의 추리는 틀렸습니다! 문구 출력
             2. 카운트 1 증가
@@ -37,7 +42,7 @@
             1. 당신의 추리가 맞습니다! 문구 출력
             2. 다시 시작하기 버튼 만들고
             3. 나머지 초기화
-        }
+        }*/
     </script>
 </body>
 </html>
