@@ -14,6 +14,7 @@
         <br>We'll tell you if your guess was  too high or too low.
     </p>
     <div>Enter a guess: <input id="guess" type="text"> <input id="submit" type="submit" value="Submit guess" onclick="myFunction()"></div>
+    <div id="left">남은 횟수 : 10</div>
     <p id="answer"></p>
     <p id="this"></p>
     <script>
@@ -33,8 +34,16 @@
             else if(yourGuess == randomNumber) {
                 document.getElementById('answer').innerText = "축하합니다 ! 정답입니다 !"
             }
-            Guesses.push(yourGuess);
-            document.getElementById('this').innerText="Privious guess : " + Guesses
+            if(count >= 10) {
+                document.getElementById('answer').innerText = "당신이 졌습니다. 다시 시작하시겠습니까?"
+                document.getElementById('left').innerText="남은 횟수 : " + (10 - count)
+            }
+            else {
+                Guesses.push(yourGuess);
+                document.getElementById('this').innerText="Privious guess : " + Guesses
+                document.getElementById('left').innerText="남은 횟수 : " + (10 - count)
+
+            }
         
         }
         /*
