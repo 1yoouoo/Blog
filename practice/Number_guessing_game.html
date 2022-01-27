@@ -19,8 +19,12 @@
     <p id="this"></p>
     <script>
         const randomNumber = Math.floor(Math.random() * 101);
-        Guesses = [];
-        count = 0
+        let Guesses = [];
+        let count = 0
+        function setGameOver() {
+            
+        }
+
         function myFunction() { 
             const yourGuess = document.getElementById('guess').value;
             if(yourGuess < randomNumber) {
@@ -33,16 +37,17 @@
             }
             else if(yourGuess == randomNumber) {
                 document.getElementById('answer').innerText = "축하합니다 ! 정답입니다 !"
+                document.getElementById('submit').disabled = true;
             }
             if(count >= 10) {
                 document.getElementById('answer').innerText = "당신이 졌습니다. 다시 시작하시겠습니까?"
                 document.getElementById('left').innerText="남은 횟수 : " + (10 - count)
+                document.getElementById('submit').disabled = true;
             }
             else {
                 Guesses.push(yourGuess);
                 document.getElementById('this').innerText="Privious guess : " + Guesses
                 document.getElementById('left').innerText="남은 횟수 : " + (10 - count)
-
             }
         
         }
